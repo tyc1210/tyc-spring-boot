@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.tyc.boot</groupId>
+        <artifactId>tyc</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>tyc-module-demo</artifactId>
+    <packaging>jar</packaging>
+
+    <description>
+        demo模块，module-xx 负责具体业务逻辑，
+        新项目只需添加模块即可，可继续拆分为 api 和具体业务实现模块方便微服务扩展
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tyc.boot</groupId>
+            <artifactId>tyc-common</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tyc.boot</groupId>
+            <artifactId>tyc-starter-web</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
+</project>

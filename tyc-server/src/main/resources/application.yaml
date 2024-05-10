@@ -1,0 +1,6 @@
+server:
+  port: 6666
+
+tyc:
+  info:
+    base-package: com.tyc.boot
