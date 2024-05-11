@@ -1,8 +1,9 @@
-package com.tyc.boot.frame.web.core;
+package com.tyc.boot.frame.web.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -16,8 +17,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @AutoConfiguration
 @Slf4j
 public class TycWebAutoConfig implements WebMvcConfigurer {
-    public TycWebAutoConfig(){
-        log.info("[TycWebAutoConfig] ===> init");
+    @Bean
+    public GlobalExceptionHandler globalExceptionHandler(){
+        return new GlobalExceptionHandler();
     }
 
 }

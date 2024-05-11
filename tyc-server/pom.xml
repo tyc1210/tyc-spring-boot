@@ -19,6 +19,12 @@
     <dependencies>
         <dependency>
             <groupId>com.tyc.boot</groupId>
+            <artifactId>tyc-common</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tyc.boot</groupId>
             <artifactId>tyc-module-demo-biz</artifactId>
             <version>${revision}</version>
         </dependency>

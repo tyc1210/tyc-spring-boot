@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 类描述
  *
- * @author tyc
+ * @author jiufang
  * @version 1.0
  * @date 2024-05-10 11:29:02
  */
@@ -13,10 +13,10 @@ import lombok.Data;
 public class ErrorCode {
     private final Integer code;
 
-    private final String mag;
+    private final String msg;
 
-    public ErrorCode(Integer code, String mag) {
+    public ErrorCode(Integer code, String msg) {
         this.code = code;
-        this.mag = mag;
+        this.msg = msg;
     }
 }

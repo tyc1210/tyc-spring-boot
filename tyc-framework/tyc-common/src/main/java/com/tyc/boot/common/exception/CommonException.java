@@ -3,9 +3,9 @@ package com.tyc.boot.common.exception;
 import lombok.Data;
 
 /**
- * 类描述
+ * 通用异常
  *
- * @author tyc
+ * @author jiufang
  * @version 1.0
  * @date 2024-05-10 11:30:35
  */
