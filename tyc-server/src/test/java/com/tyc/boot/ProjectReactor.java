@@ -45,9 +45,9 @@ public class ProjectReactor {
         log.info("[main][原项目路劲改地址 ({})]", projectBaseDir);
 
         // ========== 配置，需要你手动修改 ==========
-        String groupIdNew = "com.jiufang.boot";
-        String artifactIdNew = "jiufang";
-        String packageNameNew = "com.jiufang.boot";
+        String groupIdNew = "com.test.boot";
+        String artifactIdNew = "test";
+        String packageNameNew = "com.test.boot";
         String titleNew = "脚手架";
 //        String projectBaseDirNew = projectBaseDir + "-new"; // 一键改名后，“新”项目所在的目录
         log.info("[main][检测新项目目录 ({})是否存在]", projectBaseDirNew);

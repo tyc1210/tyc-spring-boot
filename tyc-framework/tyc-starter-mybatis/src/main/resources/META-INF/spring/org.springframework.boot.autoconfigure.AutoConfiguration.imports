@@ -1,0 +1,2 @@
+com.tyc.framework.mybatis.config.TycDruidAutoConfiguration
+com.tyc.framework.mybatis.config.TycMyBatisAutoConfiguration

@@ -37,6 +37,8 @@ build/
 *.log
 *.xml.versionsBackup
 *.swp
+*.fla
+*.flattened-pom.xml
 
 !*/build/*.java
 !*/build/*.html

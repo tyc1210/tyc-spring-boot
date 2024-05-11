@@ -3,22 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <artifactId>tyc-module-demo</artifactId>
         <groupId>com.tyc.boot</groupId>
-        <artifactId>tyc</artifactId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>tyc-module-demo</artifactId>
-    <packaging>pom</packaging>
-
-    <description>
-        拆分为 api 和具体业务实现模块方便以后向微服务扩展
-    </description>
-    <modules>
-        <module>tyc-module-demo-api</module>
-        <module>tyc-module-demo-biz</module>
-    </modules>
+    <artifactId>tyc-module-demo-biz</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -30,6 +22,18 @@
         <dependency>
             <groupId>com.tyc.boot</groupId>
             <artifactId>tyc-starter-web</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tyc.boot</groupId>
+            <artifactId>tyc-starter-mybatis</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tyc.boot</groupId>
+            <artifactId>tyc-module-demo-api</artifactId>
             <version>${revision}</version>
         </dependency>
     </dependencies>

@@ -12,8 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SuppressWarnings("SpringComponentScan")
 @SpringBootApplication(scanBasePackages = {
-        "${tyc.info.base-package}.server",
-        "${tyc.info.base-package}.module"
+        "${base.info.package}.server",
+        "${base.info.package}.module"
 })
 public class TycServerApplication {
     public static void main(String[] args) {

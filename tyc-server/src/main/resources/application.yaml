@@ -1,6 +1,23 @@
-server:
-  port: 6666
-
-tyc:
+# 基础信息配置
+base:
   info:
-    base-package: com.tyc.boot
+    package: com.tyc
+
+# tomcat 配置
+server:
+  port: 8007
+
+
+# spring 配置
+spring:
+  profiles:
+    active: dev
+
+#mybatis plus配置
+mybatis-plus:
+  global-config:
+    db-config:
+      table-underline: true # 数据库表名采用下划线命名与实体类匹配默认true
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true # 数据库表字段采用下划线命名与实体类匹配默认true
