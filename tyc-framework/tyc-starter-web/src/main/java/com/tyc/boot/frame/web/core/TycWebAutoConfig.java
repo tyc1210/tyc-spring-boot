@@ -1,5 +1,6 @@
 package com.tyc.boot.frame.web.core;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -13,10 +14,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @date 2024-05-10 10:49:14
  */
 @AutoConfiguration
+@Slf4j
 public class TycWebAutoConfig implements WebMvcConfigurer {
-
-    @Value("${spring.application.name}")
-    private String applicationName;
-
+    public TycWebAutoConfig(){
+        log.info("[TycWebAutoConfig] ===> init");
+    }
 
 }
