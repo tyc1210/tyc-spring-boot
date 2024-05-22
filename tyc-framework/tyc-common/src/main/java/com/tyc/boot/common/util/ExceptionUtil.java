@@ -1,9 +1,9 @@
-package com.tyc.boot.common.exception.util;
+package com.tyc.boot.common.util;
 
 /**
  * 类描述
  *
- * @author tyc
+ * @author jiufang
  * @version 1.0
  * @date 2024-05-10 11:34:08
  */

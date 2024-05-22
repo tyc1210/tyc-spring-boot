@@ -42,6 +42,30 @@
             </dependency>
 
             <dependency>
+                <groupId>com.tyc.boot</groupId>
+                <artifactId>tyc-common</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tyc.boot</groupId>
+                <artifactId>tyc-starter-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tyc.boot</groupId>
+                <artifactId>tyc-starter-mybatis</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tyc.boot</groupId>
+                <artifactId>tyc-module-system-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>

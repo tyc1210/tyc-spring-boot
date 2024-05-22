@@ -13,7 +13,7 @@ spring:
         enabled: true
       stat-view-servlet:
         enabled: true
-        allow: 127.0.0.1 # ip 白名单
+        allow: 127.0.0.1 # ip 白名单 {ip}/druid/login.html
         url-pattern: /druid/*
         login-username: druid
         login-password: druid
@@ -26,3 +26,7 @@ spring:
         wall:
           config:
             multi-statement-allow: true
+
+module:
+  system:
+    name: test_sys

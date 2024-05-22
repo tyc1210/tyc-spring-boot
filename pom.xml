@@ -12,6 +12,7 @@
         <module>tyc-framework</module>
         <module>tyc-server</module>
         <module>tyc-module-demo</module>
+        <module>tyc-module-system</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -20,14 +21,14 @@
 
     <properties>
         <revision>1.0.1</revision>
-        <!--maven相关-->
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
-
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <spring.boot.version>2.7.18</spring.boot.version>
-
+        <lombok.version>1.18.30</lombok.version>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -72,6 +73,33 @@
                         <phase>clean</phase>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- maven-compiler-plugin 插件，解决 spring-boot-configuration-processor + Lombok + MapStruct 组合 -->
+            <!-- https://stackoverflow.com/questions/33483697/re-run-spring-boot-configuration-annotation-processor-to-update-generated-metada -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-configuration-processor</artifactId>
+                            <version>${spring.boot.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
             </plugin>
         </plugins>
     </build>

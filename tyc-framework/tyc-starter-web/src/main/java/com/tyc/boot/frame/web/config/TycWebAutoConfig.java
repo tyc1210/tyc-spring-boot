@@ -1,7 +1,8 @@
 package com.tyc.boot.frame.web.config;
 
+import com.tyc.boot.frame.web.core.GlobalExceptionHandler;
+import com.tyc.boot.frame.web.util.SpringContextUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -20,6 +21,11 @@ public class TycWebAutoConfig implements WebMvcConfigurer {
     @Bean
     public GlobalExceptionHandler globalExceptionHandler(){
         return new GlobalExceptionHandler();
+    }
+
+    @Bean
+    public SpringContextUtil springContextUtil(){
+        return new SpringContextUtil();
     }
 
 }

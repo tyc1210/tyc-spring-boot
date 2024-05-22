@@ -1,8 +1,8 @@
-package com.tyc.boot.frame.web.config;
+package com.tyc.boot.frame.web.core;
 
 
-import com.tyc.boot.common.exception.util.ExceptionUtil;
 import com.tyc.boot.common.pojo.CommonResult;
+import com.tyc.boot.common.util.ExceptionUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

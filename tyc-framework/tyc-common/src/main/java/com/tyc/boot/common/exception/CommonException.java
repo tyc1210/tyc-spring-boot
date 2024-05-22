@@ -19,6 +19,11 @@ public class CommonException extends RuntimeException{
         this.msg = msg;
     }
 
+    public CommonException(ErrorCode errorCode){
+        this.code = errorCode.getCode();
+        this.msg = errorCode.getMsg();
+    }
+
     @Override
     public String getMessage() {
         return msg;
